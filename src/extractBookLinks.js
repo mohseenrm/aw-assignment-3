@@ -414,7 +414,11 @@ const stringExport = JSON.stringify(
 );
 console.info('Writing to file...');
 
-return fs.writeFile('wikibooks.json', stringExport, (err) => {
-	if(err) { console.warn('Could not write file\n', err); }
-	console.info('Data exported!');
-});
+const run = () => {
+	return fs.writeFile('wikibooks.json', stringExport, (err) => {
+		if(err) { console.warn('Could not write file\n', err); }
+		console.info('Data exported!');
+	});
+};
+
+run();

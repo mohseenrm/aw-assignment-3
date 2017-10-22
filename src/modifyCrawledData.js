@@ -54,4 +54,6 @@ for (let i = 1; i < 440; i++){
 	promises.push(exportToJson(i));
 }
 
-return Promise.all(promises);
+const run = () => Promise.all(promises);
+
+run();
