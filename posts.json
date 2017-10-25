@@ -67,6 +67,168 @@
 				"visible", 
 				"works"
 			]
+		},
+		{
+			"type": "answer",
+			"content": "Polymorphism: The ability to treat objects of different types in a similar manner.Example: Giraffe and Crocodile are both Animals, and animals can Move.If you have an instance of an Animal then you can call Move without knowing or caring what type of animal it is.Inheritance: This is one way of achieving both Polymorphism and code reuse at the same time.Other forms of polymorphism:There are other way of achieving polymorphism, such as interfaces, which provide only polymorphism but no code reuse (sometimes the code is quite different, such as Move for a Snake would be quite different from Move for a Dog, in which case an Interface would be the better polymorphic choice in this case.In other dynamic languages polymorphism can be achieved with Duck Typing, which is the classes don't even need to share the same base class or interface, they just need a method with the same name.Or even more dynamic like Javascript, you don't even need classes at all, just an object with the same method name can be used polymorphically.",
+			"tags": [
+				"ability",
+				"achieving polymorphism", 
+				"base class",
+				"better polymorphic choice", 
+				"call move without knowing", 
+				"case",
+				"classes", 
+				"code reuse",
+				"different types", 
+				"duck typing",
+				"dynamic languages polymorphism", 
+				"dynamic like javascript", 
+				"even need classes", 
+				"forms",
+				"inheritance",  
+				"instance", 
+				"interface", 
+				"method", 
+				"one way",
+				"polymorphism", 
+				"time",
+				"treat objects",   
+				"type",
+				"used polymorphically"
+			]
+		},
+		{
+			"type": "question",
+			"content": "I found out that the above piece of code is perfectly legal in Java. I have the following questions. ThanksAdded one more question regarding Abstract method classes.,public class TestClass{public static void main(String[] args) {TestClass t = new TestClass();}private static void testMethod(){abstract class TestMethod{int a;int b;int c;abstract void implementMe();}class DummyClass extends TestMethod{void implementMe(){}}DummyClass dummy = new DummyClass()",
+			"tags": [
+				"following questions", 
+				"java",
+				"new testclass () private static void testmethod (){ abstract class testmethod", 
+				"perfectly legal", 
+				"public static void main", 
+				"question regarding abstract method classes ., public class testclass", "abstract void implementme ();} class dummyclass extends testmethod", 
+				"string [] args", 
+				"testclass", 
+				"thanksadded one", 
+				"void implementme (){}} dummyclass dummy"
+			]
+		},
+		{
+			"type": "question",
+			"content": "In java it's a bit difficult to implement a deep object copy function. What steps you take to ensure the original object and the cloned one share no reference? ",
+			"tags": [
+				"deep object copy function", 
+				"cloned one share", 
+				"original object", 
+				"bit difficult", 
+				"steps", 
+				"reference", 
+				"java", 
+				"implement", 
+				"ensure"
+			]
+		},
+		{
+			"type": "answer",
+			"content": "You can make a deep copy serialization without creating some files. Copy: Restore:,ByteArrayOutputStream bos = new ByteArrayOutputStream();ObjectOutputStream oos = new ObjectOutputStream(bos);oos.writeObject(object);oos.flush();oos.close();bos.close();byte[] byteData = bos.toByteArray();; ByteArrayInputStream bais = new ByteArrayInputStream(byteData);(Object) object = (Object) new ObjectInputStream(bais).readObject();",
+			"tags": [
+				"bais ). readobject ();",
+				"bytedata );( object", "bos ); oos", 
+				"close (); bos", 
+				"close (); byte [] bytedata", 
+				"deep copy serialization without creating", 
+				"files",
+				"flush (); oos", 
+				"make", 
+				"new bytearrayinputstream", 
+				"new bytearrayoutputstream (); objectoutputstream oos", 
+				"new objectinputstream", 
+				"new objectoutputstream", 
+				"object", 
+				"restore :, bytearrayoutputstream bos", 
+				"tobytearray ();; bytearrayinputstream bais", 
+				"writeobject"
+			]
+		},
+		{
+			"type": "answer",
+			"content": "Java has the ability to create classes at runtime. These classes are known as Synthetic Classes or Dynamic Proxies. See for more information. Other open-source libraries, such as and also allow you to generate synthetic classes, and are more powerful than the libraries provided with the JRE. Synthetic classes are used by AOP (Aspect Oriented Programming) libraries such as Spring AOP and AspectJ, as well as ORM libraries such as Hibernate.",
+			"tags": [
+				"ability",
+				"aop", 
+				"aspect oriented programming", 
+				"aspectj", 
+				"classes", 
+				"create classes", 
+				"dynamic proxies", 
+				"generate synthetic classes", 
+				"hibernate", 
+				"information", 
+				"java", 
+				"jre", 
+				"libraries provided", 
+				"libraries", 
+				"open", 
+				"orm libraries", 
+				"powerful", 
+				"runtime", 
+				"source libraries", 
+				"spring aop", 
+				"synthetic classes"
+			]
+		},
+		{
+			"type": "accepted-answer",
+			"content": "A safe way is to serialize the object, then deserialize.This ensures everything is a brand new reference.about how to do this efficiently. Caveats: It's possible for classes to override serialization such that new instances are created, e.g. for singletons.Also this of course doesn't work if your classes aren't Serializable.",
+			"tags": [
+				"brand new reference", 
+				"caveats",
+				"classes", 
+				"course", 
+				"created", 
+				"deserialize", 
+				"efficiently", 
+				"ensures everything", 
+				"new instances", 
+				"object", 
+				"override serialization", 
+				"possible", 
+				"safe way", 
+				"serializable", 
+				"serialize", 
+				"singletons"
+			]
+		},
+		{
+			"type": "answer",
+			"content": "comment this code       ,/*if (savedinstancestate == null) {     getsupportfragmentmanager().begintransaction()             .add(r.id.container  new placeholderfragment())             .commit(); }*/",
+			"tags": [
+				"getsupportfragmentmanager (). begintransaction ()", 
+				"container new placeholderfragment ()", 
+				"savedinstancestate == null", 
+				"commit (); }*/",  
+				"id", 
+				"comment", 
+				"add"
+			]
+		},
+		{
+			"type": "question",
+			"content": "in a class i can have as many constructors as i want with different argument types. i made all the constructors as private it didn't give any error because my implicit default constructor was public but when i declared my implicit default constructor as private then its showing an error while extending the class.  why?       this works fine         this can not be inherited       ,\"public class demo4  {     private string name;     private int age;     private double sal;      private demo4(string name  int age) {         this.name=name;         this.age=age;        }      demo4(string name) {         this.name=name;     }      demo4() {         this(\"\"unknown\"\"  20);         this.sal=2000;     }      void show(){         system.out.println(\"\"name\"\"+name);         system.out.println(\"\"age: \"\"+age);     } }  public class demo4  {     private string name;     private int age;     private double sal;      private demo4(string name  int age) {         this.name=name;         this.age=age;     }      demo4(string name) {         this.name=name;     }      private demo4() {         this(\"\"unknown\"\"  20);         this.sal=2000;     }      void show() {         system.out.println(\"\"name\"\"+name);         system.out.println(\"\"age: \"\"+age);     } }  ","tags": [
+				"class", 
+				"constructors", 
+				"declared",
+				"different argument types", 
+				"error", 
+				"extending", 
+				"give", 
+				"implicit default constructor", 
+				"inherited", 
+				"made",
+				"many constructors", 
+				"name"
+			]
 		}
 	]
 }
