@@ -16,7 +16,7 @@ const exportDir = path.join(
 const run = () => {
 	let promises = [];
 
-	for(let i = 2; i < 440; i++){
+	for(let i = 1; i < 9; i++){
 		promises.push(readFileAndIndex(i));
 	}
 
