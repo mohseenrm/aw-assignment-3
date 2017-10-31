@@ -3,7 +3,7 @@ const path = require('path');
 const es = require('elasticsearch');
 
 const esHandler = new es.Client({
-	host: 'http://ec2-18-221-242-218.us-east-2.compute.amazonaws.com:9200',
+	host: 'http://localhost:9200',
 	log: 'trace'
 });
 
@@ -16,7 +16,7 @@ const exportDir = path.join(
 const run = () => {
 	let promises = [];
 
-	for(let i = 1; i < 9; i++){
+	for(let i = 1; i < 448; i++){
 		promises.push(readFileAndIndex(i));
 	}
 
