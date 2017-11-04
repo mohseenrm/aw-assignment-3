@@ -40,7 +40,7 @@ const readFileAndIndex = (number) => {
 		}
 	);
 };
-
+// add a index
 const addIndex = (body, index) => {
 	return esHandler.index(
 		{
