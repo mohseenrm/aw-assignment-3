@@ -12,7 +12,7 @@ const exportDir = path.join(
 	'..',
 	'export'
 );
-
+// test
 const run = () => {
 	let promises = [];
 
